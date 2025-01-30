@@ -55,7 +55,7 @@ function App() {
               <p className="text-gray-400 text-lg">
                 Advanced Technologist, Software Engineer, Fullstack Developer,
                 Data Scientist, Data Engineer.
-                <br /> passionate about learning and implementing new skills.
+                <br /> Passionate about learning and implementing new skills.
               </p>
               <div className="flex gap-6 pt-4">
                 <a
