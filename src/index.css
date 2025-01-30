@@ -1,65 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "JetBrains Mono", monospace;
-}
-
-/* Firefox-specific scrollbar styling */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #4f46e5 #f3f4f6;
-}
-
-/* Ensure smooth scrolling works in Firefox */
-@supports (-moz-appearance: none) {
-  .smooth-scroll {
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
+  
+  body {
+    @apply bg-gray-900;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.1;
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
   }
-  50% {
-    opacity: 0.5;
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-800;
   }
-}
 
-.animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
-}
-
-/* Terminal-like text effect only for hero section */
-.hero-text::after {
-  content: "_";
-  animation: cursor 1s infinite;
-}
-
-@keyframes cursor {
-  0%,
-  100% {
-    opacity: 1;
+  ::-webkit-scrollbar-thumb {
+    @apply bg-green-500/50 rounded-full;
   }
-  50% {
-    opacity: 0;
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-green-500/70;
   }
 }
